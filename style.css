@@ -1,0 +1,45 @@
+body {
+    background-color: #9dbccd;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+section {
+    flex: 1;
+    margin: 0 5px; /* Reducir el margen entre las secciones */
+    position: relative;
+}
+
+.textarea {
+    width: calc(100% - 10px); /* Reducir el ancho y compensar el margen */
+    height: 300px; /* Aumentar la altura */
+    resize: none;
+    margin-bottom: 10px; /* Espacio adicional entre el textarea y los botones */
+}
+
+.button-container {
+    display: flex;
+   justify-content: right;
+   
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 18%; /* Ancho de los botones */
+}
+#copy {
+    align-self: flex-end;
+}
+#cifrar{
+    margin-right: 3px;
+}
