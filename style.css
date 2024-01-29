@@ -1,32 +1,50 @@
 body {
-    background-color: #9dbccd;
+    background-color: #708D90;
 }
-.main {
+
+header {
+    text-align: center;
+}
+
+main {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.section {
+    width: 48%;
+    /* Adjust the width of the sections */
     padding: 20px;
+    /* Add some inner padding */
+
 }
 
-section {
-    flex: 1;
-    margin: 0 5px; /* Reducir el margen entre las secciones */
-    position: relative;
+#section-left {
+    margin-left: 10px;
 }
 
-.textarea {
-    width: calc(100% - 10px); /* Reducir el ancho y compensar el margen */
-    height: 300px; /* Aumentar la altura */
+#section-r {
+    margin-right: 10px;
+}
+
+textarea {
+    background-color: rgb(69, 70, 78);
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     resize: none;
-    margin-bottom: 10px; /* Espacio adicional entre el textarea y los botones */
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    width: 35em;
+    height: 25em;
 }
 
-.button-container {
-    display: flex;
-   justify-content: right;
-   
+#textarea-right{
+    
 }
-
 .button {
     padding: 10px 20px;
     font-size: 16px;
@@ -35,11 +53,47 @@ section {
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    width: 18%; /* Ancho de los botones */
+    width: 21%;
+    right: 20em;
+    /* Ancho de los botones */
 }
+
+.button-container {
+    display: flex;
+    justify-content: right;
+}
+
 #copy {
-    align-self: flex-end;
+    justify-content: center;
 }
-#cifrar{
-    margin-right: 3px;
+
+#descifrar {
+    margin-left: 1em;
 }
+/* Ajustes para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambiar a disposición de columna en pantallas más pequeñas */
+        justify-content: center;
+    }
+
+    #section-left, #section-r {
+        width: 100%; /* Ancho completo para las secciones en pantallas más pequeñas */
+        margin-left:  10px; /* Espaciado entre las secciones en pantallas más pequeñas */
+        margin-right: 10px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-start; /* Alinear los botones a la izquierda */
+        max-width: 100%; /* Ancho máximo igual al 100% del contenedor principal */
+        overflow-x: auto; /* Agregar desplazamiento horizontal si el contenido excede el ancho máximo */
+    }
+
+    .button {
+        flex: 0 0 auto; /* Establecer el botón como elemento flexible con tamaño automático */
+        width: 23%; /* Ancho máximo para los botones en pantallas más pequeñas */
+        margin-top: 10px; /* Espaciado superior para los botones en pantallas más pequeñas */
+    }
+}
+

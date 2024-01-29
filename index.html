@@ -9,9 +9,12 @@
 </head>
 
 <body>
-    
-    <main class="main">
-        <section>
+    <header>
+        <h1>(Des)CifraScript</h1>
+    </header>
+    <main>
+
+        <section id="section-left">
             <textarea class="textarea" id="textarea-left" placeholder="Escriba el texto a encriptar"></textarea>
             <div class="button-container">
                 <input type="button" class="button" id="cifrar" value="Cifrar" onclick="cifrar()" />
@@ -19,12 +22,16 @@
             </div>
         </section>
 
-        <section>
-            <textarea class="textarea" id="textarea-right" placeholder="Aún no hay mensajes que encriptar o desencriptar"></textarea>
-            <input type="button" class="button" id="copy" value="Copiar" onclick="copy()" />
+        <section id="section-r">
+            <!--<img src="img/lupa.png" alt="lupa">-->
+            <textarea class="textarea" id="textarea-right"
+                placeholder="Aún no hay mensajes que encriptar o desencriptar" readonly ></textarea>
+            <div class="button-container">
+                <input type="button" class="button" id="copy" value="Copiar" onclick="copy()" />
+            </div>
         </section>
     </main>
-
+<!--falta el footer-->
 </body>
 
 </html>
