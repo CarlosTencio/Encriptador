@@ -1,5 +1,10 @@
 body {
     background-color: #708D90;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -7,6 +12,7 @@ header {
 }
 
 main {
+
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -42,9 +48,8 @@ textarea {
     height: 25em;
 }
 
-#textarea-right{
-    
-}
+#textarea-right {}
+
 .button {
     padding: 10px 20px;
     font-size: 16px;
@@ -70,30 +75,54 @@ textarea {
 #descifrar {
     margin-left: 1em;
 }
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Ajustes para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
     main {
-        flex-direction: column; /* Cambiar a disposición de columna en pantallas más pequeñas */
+        flex-direction: column;
+        /* Cambiar a disposición de columna en pantallas más pequeñas */
         justify-content: center;
+
     }
 
-    #section-left, #section-r {
-        width: 100%; /* Ancho completo para las secciones en pantallas más pequeñas */
-        margin-left:  10px; /* Espaciado entre las secciones en pantallas más pequeñas */
+    #section-left,
+    #section-r {
+        width: 100%;
+        /* Ancho completo para las secciones en pantallas más pequeñas */
+        margin-left: 10px;
+        /* Espaciado entre las secciones en pantallas más pequeñas */
         margin-right: 10px;
+        margin-bottom: 1em;
     }
 
     .button-container {
         display: flex;
-        justify-content: flex-start; /* Alinear los botones a la izquierda */
-        max-width: 100%; /* Ancho máximo igual al 100% del contenedor principal */
-        overflow-x: auto; /* Agregar desplazamiento horizontal si el contenido excede el ancho máximo */
+        justify-content: flex-start;
+        /* Alinear los botones a la izquierda */
+        max-width: 100%;
+        /* Ancho máximo igual al 100% del contenedor principal */
+        overflow-x: auto;
+        /* Agregar desplazamiento horizontal si el contenido excede el ancho máximo */
     }
 
     .button {
-        flex: 0 0 auto; /* Establecer el botón como elemento flexible con tamaño automático */
-        width: 23%; /* Ancho máximo para los botones en pantallas más pequeñas */
-        margin-top: 10px; /* Espaciado superior para los botones en pantallas más pequeñas */
+        flex: 0 0 auto;
+        /* Establecer el botón como elemento flexible con tamaño automático */
+        width: 23%;
+        /* Ancho máximo para los botones en pantallas más pequeñas */
+        margin-top: 10px;
+        /* Espaciado superior para los botones en pantallas más pequeñas */
     }
-}
 
+}
